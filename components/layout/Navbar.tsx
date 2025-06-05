@@ -73,18 +73,18 @@ useEffect(() => {
             Home
           </Link>
           <Link 
-            href="/pricing" 
+            href="/summarize" 
+            className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-blue-50"
+            onClick={() => setIsOpen(false)}
+          >
+            Summarize
+          </Link>
+          <Link 
+            href="#" 
             className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-blue-50"
             onClick={() => setIsOpen(false)}
           >
             Pricing
-          </Link>
-          <Link 
-            href="/about" 
-            className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-blue-50"
-            onClick={() => setIsOpen(false)}
-          >
-            About
           </Link>
          
           
