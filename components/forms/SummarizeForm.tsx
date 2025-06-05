@@ -229,20 +229,31 @@ const SummarizeForm = () => {
 			<div className="sticky bottom-0 bg-[#282935] border-t border-gray-700/50 p-2 md:p-4">
 				<form onSubmit={fetchData} className="max-w-3xl mx-auto relative">
 					<div className="relative flex items-center">
-						<input
+						<textarea
 							value={prompt}
 							onChange={(e) => setPrompt(e.target.value)}
 							disabled={loading}
-							className="w-full py-3 px-4 pr-12 rounded-lg bg-[#40414f] border border-gray-700 text-white placeholder-gray-400 focus:outline-none focus:ring-1 focus:ring-[#10a37f] shadow-lg"
+							className="w-full py-3 px-4 pr-12 rounded-lg bg-[#40414f] border border-gray-700 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#10a37f] shadow-lg resize-none min-h-[80px] transition-all"
 							placeholder="Paste text to summarize..."
+							aria-label="Text to summarize"
+							rows={3}
+							onKeyDown={(e) => {
+								if (e.key === "Enter" && !e.shiftKey && prompt.trim()) {
+									e.preventDefault();
+									fetchData(e as any);
+								}
+							}}
 						/>
 						<button
 							type="submit"
 							disabled={loading || !prompt.trim()}
-							className={`absolute right-2 p-1.5 rounded-md text-gray-300 ${
+							aria-label={
+								loading ? "Summarizing..." : "Submit text for summarization"
+							}
+							className={`absolute right-3 bottom-3 p-2 rounded-md text-gray-300 transition-all ${
 								!prompt.trim() || loading
 									? "opacity-50 cursor-not-allowed"
-									: "hover:bg-gray-600 hover:text-white"
+									: "hover:bg-[#10a37f] hover:text-white active:scale-95"
 							}`}>
 							{loading ? (
 								<Loader2 className="w-5 h-5 animate-spin" />
@@ -251,6 +262,7 @@ const SummarizeForm = () => {
 							)}
 						</button>
 					</div>
+
 					<p className="text-xs text-center text-gray-500 mt-2">
 						TextSummarizer may produce inaccurate information about people,
 						places, or facts.

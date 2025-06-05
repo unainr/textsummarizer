@@ -17,7 +17,7 @@ const plans = [
       "Web-based access only"
     ],
     cta: "Get Started",
-    ctaLink: "/signup",
+    ctaLink: "/",
     highlighted: false
   },
   {
@@ -35,7 +35,7 @@ const plans = [
       "Email summaries"
     ],
     cta: "Start Free Trial",
-    ctaLink: "/signup?plan=pro",
+    ctaLink: "/",
     highlighted: true
   },
   {
@@ -54,7 +54,7 @@ const plans = [
       "SSO authentication"
     ],
     cta: "Contact Sales",
-    ctaLink: "/contact",
+    ctaLink: "/",
     highlighted: false
   }
 ];
