@@ -20,7 +20,7 @@ useEffect(() => {
   return (
     <header>
     <nav className={`fixed top-0 z-50 w-full transition-all duration-200 ${
-        isScrolled ? "bg-black backdrop-blur-md " : "text-black"
+        isScrolled ? " backdrop-blur-md " : ""
       }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
@@ -29,7 +29,7 @@ useEffect(() => {
               <div className="w-8 h-8 rounded-md bg-gradient-to-r from-teal-500 to-indigo-600 flex items-center justify-center mr-2">
                 <span className="text-white font-bold">TS</span>
               </div>
-              <span className="text-white font-semibold text-xl">TextSummarizer</span>
+              <span className=" font-semibold text-xl">TextSummarizer</span>
             </div>
 
 
@@ -44,6 +44,7 @@ useEffect(() => {
             <Link href="/summarize-text" className=" transition-colors">
               Summarize Text
             </Link>
+
           </div>
 
           {/* Mobile Menu Button */}

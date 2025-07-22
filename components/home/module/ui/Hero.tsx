@@ -184,7 +184,7 @@ const Hero = () => {
           <motion.button 
             whileHover={{ scale: 1.05, y: -2 }}
             whileTap={{ scale: 0.98 }}
-            className="group w-64 rounded-xl border-2 border-neutral-200 bg-white/80 px-8 py-4 font-semibold text-neutral-700 backdrop-blur-sm transition-all duration-300 hover:border-neutral-300 hover:bg-white hover:shadow-lg dark:border-neutral-700 dark:bg-neutral-900/80 dark:text-neutral-200 dark:hover:border-neutral-600 dark:hover:bg-neutral-900"
+            className="group w-64 rounded-xl border-2 border-neutral-200 bg-white/80 px-8 py-4 font-semibold text-neutral-700 backdrop-blur-sm transition-all duration-300 hover:border-neutral-300 hover:bg-white hover:shadow-lg dark:border-neutral-700 dark:bg-neutral-900/80 dark:text-neutral-200 dark:hover:border-neutral-600 dark:hover:bg-neutral-900 cursor-pointer"
           >
             <span className="flex items-center justify-center gap-2">
               📚 View Examples

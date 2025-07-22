@@ -30,7 +30,7 @@ const HowItWorks = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
             viewport={{ once: true }}
-            className="text-3xl md:text-4xl font-bold text-white mb-4"
+            className="text-3xl md:text-4xl font-bold  mb-4"
           >
             How It Works
           </motion.h2>
@@ -39,7 +39,7 @@ const HowItWorks = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.1 }}
             viewport={{ once: true }}
-            className="max-w-2xl mx-auto text-gray-400 text-lg"
+            className="max-w-2xl mx-auto  text-lg"
           >
             Summarizing text has never been easier. Our streamlined process takes just seconds.
           </motion.p>
@@ -60,12 +60,12 @@ const HowItWorks = () => {
                 <div className="hidden md:block absolute top-16 left-full w-full h-0.5 bg-gradient-to-r from-teal-500 to-indigo-500 transform -translate-x-1/2 z-0"></div>
               )}
               
-              <div className="bg-[#1f2029] p-8 rounded-xl border border-gray-800 relative z-10 h-full flex flex-col items-center text-center">
-                <div className="w-16 h-16 rounded-full bg-gray-800 flex items-center justify-center mb-6">
+              <div className=" p-8 rounded-xl border  relative z-10 h-full flex flex-col items-center text-center">
+                <div className="w-16 h-16 rounded-full  flex items-center justify-center mb-6">
                   {step.icon}
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-4">{step.title}</h3>
-                <p className="text-gray-400">{step.description}</p>
+                <h3 className="text-xl font-semibold  mb-4">{step.title}</h3>
+                <p >{step.description}</p>
               </div>
             </motion.div>
           ))}

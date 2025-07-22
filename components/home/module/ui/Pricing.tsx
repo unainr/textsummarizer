@@ -61,7 +61,7 @@ const plans = [
 
 const Pricing = () => {
   return (
-    <section id="pricing" className="py-20 bg-[#282935]">
+    <section id="pricing" className="py-20 ">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <motion.h2 
@@ -69,7 +69,7 @@ const Pricing = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
             viewport={{ once: true }}
-            className="text-3xl md:text-4xl font-bold text-white mb-4"
+            className="text-3xl md:text-4xl font-bold  mb-4"
           >
             Simple, Transparent Pricing
           </motion.h2>
@@ -78,7 +78,7 @@ const Pricing = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.1 }}
             viewport={{ once: true }}
-            className="max-w-2xl mx-auto text-gray-400 text-lg"
+            className="max-w-2xl mx-auto  text-lg"
           >
             Choose the plan that fits your needs. All plans include our core summarization technology.
           </motion.p>
@@ -95,20 +95,20 @@ const Pricing = () => {
               className={`rounded-xl overflow-hidden ${
                 plan.highlighted 
                   ? "border-2 border-teal-500 relative" 
-                  : "border border-gray-800"
+                  : ""
               }`}
             >
               {plan.highlighted && (
-                <div className="absolute top-0 left-0 right-0 bg-teal-500 text-center py-1 text-sm font-medium text-white">
+                <div className="absolute top-0 left-0 right-0 bg-teal-500 text-center py-1 text-sm font-medium ">
                   Most Popular
                 </div>
               )}
               
-              <div className={`p-8 ${plan.highlighted ? "pt-7" : ""} bg-[#1f2029]`}>
-                <h3 className="text-xl font-semibold text-white mb-2">{plan.name}</h3>
+              <div className={`p-8 ${plan.highlighted ? "pt-7" : ""}`}>
+                <h3 className="text-xl font-semibold  mb-2">{plan.name}</h3>
                 <div className="flex items-baseline mb-4">
-                  <span className="text-4xl font-bold text-white">{plan.price}</span>
-                  <span className="ml-2 text-gray-400">/{plan.period}</span>
+                  <span className="text-4xl font-bold ">{plan.price}</span>
+                  <span className="ml-2 ">/{plan.period}</span>
                 </div>
                 <p className="text-gray-400 mb-6">{plan.description}</p>
                 
@@ -116,7 +116,7 @@ const Pricing = () => {
                   href={plan.ctaLink}
                   className={`block w-full py-3 px-4 rounded-lg text-center font-medium transition-colors ${
                     plan.highlighted
-                      ? "bg-teal-500 hover:bg-teal-600 text-white"
+                      ? "bg-teal-500 hover:bg-teal-600"
                       : "bg-gray-800 hover:bg-gray-700 text-white"
                   }`}
                 >
@@ -124,13 +124,13 @@ const Pricing = () => {
                 </Link>
               </div>
               
-              <div className="p-8 bg-[#282935] border-t border-gray-800">
-                <p className="font-medium text-white mb-4">What's included:</p>
+              <div className="p-8 ">
+                <p className="font-medium  mb-4">What's included:</p>
                 <ul className="space-y-3">
                   {plan.features.map((feature, i) => (
                     <li key={i} className="flex items-start">
                       <Check className="h-5 w-5 text-teal-500 mr-2 flex-shrink-0 mt-0.5" />
-                      <span className="text-gray-300">{feature}</span>
+                      <span >{feature}</span>
                     </li>
                   ))}
                 </ul>

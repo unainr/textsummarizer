@@ -101,14 +101,14 @@ export default function DemoText({ cardId }: DemoClientPageProps) {
           <Button 
             variant="outline" 
             onClick={() => router.push('/')}
-            className="flex items-center gap-2"
+            className="flex items-center gap-2 cursor-pointer"
           >
             <ArrowLeft className="h-4 w-4" />
             Back to Home
           </Button>
           
           <div className="flex items-center gap-3">
-            <div className="bg-blue-600 rounded-xl p-3">
+            <div className="bg-green-600 rounded-xl p-3">
               <Stethoscope className="h-6 w-6 text-white" />
             </div>
             <div>
@@ -135,7 +135,7 @@ export default function DemoText({ cardId }: DemoClientPageProps) {
               
               <CardContent className="space-y-6 ">
                 <div>
-                  <label className="text-sm font-medium text-blue-600 mb-3 block">
+                  <label className="text-sm font-medium text-green-600 mb-3 block">
                     Choose the Task:
                   </label>
                   <Select value={selectedTask}  onValueChange={setSelectedTask}>
@@ -153,16 +153,16 @@ export default function DemoText({ cardId }: DemoClientPageProps) {
                 </div>
 
                 <div>
-                  <label className="text-sm font-medium text-blue-600 mb-3 block">
+                  <label className="text-sm font-medium text-green-600 mb-3 block">
                     Choose the Pretrained Model:
                   </label>
                   <Select value={selectedModel} onValueChange={setSelectedModel}>
-                    <SelectTrigger className="w-full text-black border-blue-200 focus:border-blue-400">
+                    <SelectTrigger className="w-full  border-blue-200 focus:border-blue-400">
                       <SelectValue />
                     </SelectTrigger>
                     <SelectContent>
                       {card.models.map((model) => (
-                        <SelectItem className=' text-white' key={model} value={model}>
+                        <SelectItem className='' key={model} value={model}>
                           {model}
                         </SelectItem>
                       ))}
@@ -171,7 +171,7 @@ export default function DemoText({ cardId }: DemoClientPageProps) {
                 </div>
 
                 <div>
-                  <label className="text-sm font-medium text-blue-600 mb-3 block">
+                  <label className="text-sm font-medium text-green-600 mb-3 block">
                     Input Text:
                   </label>
                   <Textarea
@@ -185,11 +185,11 @@ export default function DemoText({ cardId }: DemoClientPageProps) {
                 <Button 
                   onClick={handleProcessText} 
                   disabled={isProcessing || !inputText.trim()}
-                  className="w-full bg-blue-600 hover:bg-blue-700 text-white h-12 text-base"
+                  className="w-full bg-green-600 hover:bg-green-700  h-12 text-base cursor-pointer"
                 >
                   {isProcessing ? (
                     <div className="flex items-center gap-2">
-                      <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white"></div>
+                      <div className="animate-spin rounded-full h-5 w-5 border-b-2 text-green-600"></div>
                       Processing...
                     </div>
                   ) : (
@@ -205,22 +205,22 @@ export default function DemoText({ cardId }: DemoClientPageProps) {
 
           {/* Right Panel - Results */}
           <div className="space-y-6">
-            <Card className="bg-gray-900 text-white border-0 shadow-lg h-full">
+            <Card className=" border-0 shadow-lg h-full">
               <CardHeader>
                 <div className="flex items-center gap-2">
                   <Activity className="h-5 w-5 text-green-400" />
-                  <CardTitle className="text-white">Analysis Results</CardTitle>
+                  <CardTitle >Analysis Results</CardTitle>
                 </div>
               </CardHeader>
               
               <CardContent className="h-[500px] overflow-auto">
                 {results ? (
-                  <pre className="text-sm whitespace-pre-wrap font-mono leading-relaxed text-gray-100">
+                  <pre className="text-sm whitespace-pre-wrap font-mono leading-relaxed ">
                     {results}
                   </pre>
                 ) : (
                   <div className="flex items-center justify-center h-full">
-                    <div className="text-center text-gray-400">
+                    <div className="text-center ">
                       <Activity className="h-12 w-12 mx-auto mb-4 opacity-50" />
                       <p className="text-lg font-medium mb-2">Ready to Analyze</p>
                       <p className="text-sm">Run analysis to see results here...</p>
@@ -232,30 +232,8 @@ export default function DemoText({ cardId }: DemoClientPageProps) {
           </div>
         </div>
 
-        {/* Additional Info */}
-        <div className="mt-12">
-          <Card className="bg-white/60 backdrop-blur-sm border-0 shadow-lg">
-            <CardContent className="p-8 text-center">
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">
-                Explore More Medical AI Models
-              </h3>
-              <p className="text-gray-600 mb-6">
-                Discover our comprehensive suite of medical AI models and transform your healthcare workflows.
-              </p>
-              <div className="flex gap-4 justify-center">
-                <Button 
-                  onClick={() => router.push('/')}
-                  className="bg-blue-600 hover:bg-blue-700"
-                >
-                  View All Models
-                </Button>
-                <Button variant="outline">
-                  Documentation
-                </Button>
-              </div>
-            </CardContent>
-          </Card>
-        </div>
+      
+   
       </div>
     </div>
   );

@@ -33,14 +33,14 @@ export const  TextCardComponent =()=> {
   const router = useRouter();
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-indigo-50">
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-green-50">
       <div className="container mx-auto px-4 py-8">
         <div className="text-center mb-12">
           <div className="flex items-center justify-center gap-3 mb-4">
-            <div className="bg-blue-600 rounded-xl p-3">
+            <div className="bg-green-600 rounded-xl p-3">
               <Stethoscope className="h-8 w-8 text-white" />
             </div>
-            <h1 className="text-4xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
+            <h1 className="text-4xl font-bold bg-gradient-to-r from-green-600 to-green-600 bg-clip-text text-transparent">
               Medical AI Labs
             </h1>
           </div>
@@ -86,7 +86,7 @@ export const  TextCardComponent =()=> {
                     <Link href={`/summarize-text/${card.id}`}>
                   <Button 
                     variant="default" 
-                    className="flex-1 bg-blue-600 hover:bg-blue-700 text-white"
+                    className="flex-1 cursor-pointer bg-green-600 hover:bg-green-700 text-white"
                     >
                     <Play className="h-4 w-4 mr-2" />
                     Live Demo
@@ -95,7 +95,7 @@ export const  TextCardComponent =()=> {
 
                   <Button 
                     variant="outline" 
-                    className="flex-1 border-orange-300 text-orange-600 hover:bg-orange-50"
+                    className="flex-1 cursor-pointer border-orange-300 text-orange-600 hover:bg-orange-50"
                   >
                     <ExternalLink className="h-4 w-4 mr-2" />
                     Colab
@@ -115,7 +115,7 @@ export const  TextCardComponent =()=> {
               Explore our comprehensive suite of medical AI models and transform your healthcare workflows.
             </p>
             <div className="flex gap-4 justify-center">
-              <Button className="bg-blue-600 hover:bg-blue-700">
+              <Button className="bg-green-600 hover:bg-green-700">
                 Get Started Free
               </Button>
               <Button variant="outline">

@@ -64,7 +64,7 @@ const Features = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
             viewport={{ once: true }}
-            className="text-3xl md:text-4xl font-bold text-white mb-4"
+            className="text-3xl md:text-4xl font-bold  mb-4"
           >
             Advanced Features for Powerful Summarization
           </motion.h2>
@@ -73,7 +73,7 @@ const Features = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.1 }}
             viewport={{ once: true }}
-            className="max-w-2xl mx-auto text-gray-400 text-lg"
+            className="max-w-2xl mx-auto  text-lg"
           >
             Our AI-powered platform offers everything you need to transform lengthy content into clear, concise summaries.
           </motion.p>
@@ -87,13 +87,13 @@ const Features = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
               viewport={{ once: true }}
-              className="bg-[#282935] p-6 rounded-xl border border-gray-800 hover:border-gray-700 transition-all hover:shadow-lg hover:shadow-teal-500/5"
+              className=" p-6 rounded-xl  "
             >
-              <div className="w-12 h-12 rounded-lg bg-gray-800 flex items-center justify-center mb-4">
+              <div className="w-12 h-12 rounded-lg  flex items-center justify-center mb-4">
                 {feature.icon}
               </div>
-              <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
-              <p className="text-gray-400">{feature.description}</p>
+              <h3 className="text-xl font-semibold  mb-2">{feature.title}</h3>
+              <p >{feature.description}</p>
             </motion.div>
           ))}
         </div>

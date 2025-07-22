@@ -150,7 +150,7 @@ const SummarizeForm = () => {
 	return (
 		<div className="min-h-screen bg-[#282935] text-white flex flex-col">
 			<Link href={"/"}>
-				<Button variant="outline" className="absolute top-4 left-4">
+				<Button variant="outline" className="absolute text-black top-4 left-4 cursor-pointer">
 					<ArrowLeft className=" h-4 w-4" />
 					Back
 				</Button>
@@ -187,7 +187,7 @@ const SummarizeForm = () => {
 								<Button
 									size={"icon"}
 									onClick={() => downloadText(msg.content, msg.id)}
-									className=" text-xs rounded-full text-white  bg-blue-500 hover:bg-blue-600"
+									className=" text-xs rounded-full cursor-pointer text-white  bg-blue-500 hover:bg-blue-600"
 									title="Download summary as text file">
 									{downloadingId === msg.id ? (
 										<Check size={18} className="text-green-500" />
@@ -221,7 +221,7 @@ const SummarizeForm = () => {
 			{showScrollButton && (
 				<button
 					onClick={scrollToBottom}
-					className="fixed bottom-28 right-6 z-50 rounded-full p-2 bg-gray-700 text-white hover:bg-gray-600 shadow-lg">
+					className="fixed bottom-28 right-6 z-50 rounded-full p-2 bg-gray-700 text-white hover:bg-gray-600 shadow-lg cursor-pointer">
 					<ArrowDown size={20} />
 				</button>
 			)}
