@@ -27,9 +27,9 @@ useEffect(() => {
           {/* Logo */}
           <div className="flex items-center">
               <div className="w-8 h-8 rounded-md bg-gradient-to-r from-teal-500 to-indigo-600 flex items-center justify-center mr-2">
-                <span className="text-white font-bold">TS</span>
+                <span className="text-white font-bold">ML</span>
               </div>
-              <span className=" font-semibold text-xl">TextSummarizer</span>
+              <span className=" font-semibold text-xl">Medical AI Labs</span>
             </div>
 
 
@@ -41,9 +41,9 @@ useEffect(() => {
             <Link href="/summarize" className=" transition-colors">
               Summarize
             </Link>
-            <Link href="/summarize-text" className=" transition-colors">
+            {/* <Link href="/summarize-text" className=" transition-colors">
               Summarize Text
-            </Link>
+            </Link> */}
 
           </div>
 

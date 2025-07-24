@@ -105,7 +105,7 @@ export const  TextCardComponent =()=> {
             </Card>
           ))}
         </div>
-
+{/* 
         <div className="text-center mt-12">
           <div className="bg-white/60 backdrop-blur-sm rounded-2xl p-8 border border-gray-200">
             <h2 className="text-2xl font-semibold text-gray-900 mb-4">
@@ -123,7 +123,7 @@ export const  TextCardComponent =()=> {
               </Button>
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
     </div>
   );

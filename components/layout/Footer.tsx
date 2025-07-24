@@ -18,9 +18,9 @@ const Footer = () => {
           <div className="col-span-1 md:col-span-2">
             <div className="flex items-center">
               <div className="w-8 h-8 rounded-md bg-gradient-to-r from-teal-500 to-indigo-600 flex items-center justify-center mr-2">
-                <span className="text-white font-bold">TS</span>
+                <span className="text-white font-bold">ML</span>
               </div>
-              <span className=" font-semibold text-xl">TextSummarizer</span>
+              <span className=" font-semibold text-xl"> Medical AI Labs</span>
             </div>
             <p className="mt-4  max-w-md">
               TextSummarizer uses advanced AI to transform lengthy content into clear, concise summaries while preserving key information and context.
